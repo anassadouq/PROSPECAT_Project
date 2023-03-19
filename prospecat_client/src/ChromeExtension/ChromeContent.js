@@ -5,8 +5,8 @@ export default class ChromeContent extends Component{
         return(
             <div className="row my-5" id="all">
                 <div className="col-8">
-                    <h1 className="my-3 text-center" id="title2">Extract Search Results and Find Emails On LinkedIn</h1>
-                    <p className="text-secondary" id="text">Prospecat Chrome Extension. A must have productivity tool.</p>
+                    <h1 className="my-5 text-center" id="prg">Extract Search Results and Find Emails On LinkedIn</h1>
+                    <p className="text-secondary" id="prg2">Prospecat Chrome Extension. A must have productivity tool.</p>
                     <div className="row">
                         <center>
                             <button className="btn rounded-pill my-4" id="btn_Leads2">Install Chrome Extension for FREE </button>

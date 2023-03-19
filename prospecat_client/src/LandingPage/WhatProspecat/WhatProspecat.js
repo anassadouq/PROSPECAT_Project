@@ -8,7 +8,7 @@ export default function WhatProspecat() {
     }
     return (
         <div className='my-5'>        
-            <h2 className="text-center" style={{"fontWeight":"bold"}}>What Is Prospecat ?</h2>
+            <h2 className="text-center my-5" style={{"fontWeight":"bold"}}>What Is Prospecat ?</h2>
             <p className='text-secondary text-center' id="text">Prospecat is a B2B prospecting platform. Use it to find email addresses and build a quality B2B Data for your sales funnel.</p>
             <div className='row'>
                 <div className='col' id="left">
@@ -34,6 +34,7 @@ export default function WhatProspecat() {
                 <div className='col'>
                     <img src="./images/WhatProspecat.png" id="imgWhatProspecat"/>
                 </div>
+                <span className="my-4"></span>
             </div>
         </div>
     );

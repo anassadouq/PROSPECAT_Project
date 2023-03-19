@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import Introduction from "./Introduction/Introduction";
 import WhatProspecat from './WhatProspecat/WhatProspecat';
 import ProductFeatures from "./ProductFeatures/ProductFeatures";
 import PricingPlan from "./PricingPlan/PricingPlan";
@@ -12,6 +13,7 @@ export default class LandingPage extends Component{
         return(
             <div>
                 <div className="container">
+                    <Introduction/>
                     <WhatProspecat/>
                     <ProductFeatures/>
                 </div>

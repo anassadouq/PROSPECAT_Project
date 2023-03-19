@@ -24,11 +24,8 @@ export default class App extends Component{
             <Routes>
               <Route path='/' element={<Blog/>}/>
               <Route path='/landing_page' element={<LandingPage/>}/>
-
               <Route path='/pricing_plan' element={<PricingPlan/>}/>
-
               <Route path='/features' element={<ProductFeatures/>}/>
-
               <Route path='/find_leads' element={<FindLeads/>}/>
               <Route path='/find_emails' element={<FindEmails/>}/>
               <Route path='/list_manager' element={<ListManager/>}/>
