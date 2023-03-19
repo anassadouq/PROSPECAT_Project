@@ -1,0 +1,32 @@
+#btn_Leads2{
+    width:330px;
+}
+#btn_contact{
+    font-style: normal;
+    font-weight: 600;
+    font-size: 17px;
+    line-height: 30px;
+    text-transform: capitalize;
+    color: #FFFFFF;
+    background-color: #0088FF;
+    width: 230px;
+    height: 45px;
+}
+#databody{
+    background-color: #E2E2E2;
+}
+#title{
+    color: #0088FF;
+}
+#title2{
+    color: #303030;
+    font-weight: 600;
+    font-size: 46px;
+}
+#text{
+    font-weight: 600;
+    font-size: 17px;
+    line-height: 38px;
+    text-align: center;
+    color: #6F6F6F;
+}

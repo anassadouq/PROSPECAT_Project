@@ -1,0 +1,27 @@
+#get_started{
+    background: linear-gradient(180deg, #51AEFF 0%, #0088FF 100%);
+}
+#get_started_title{
+    font-style: normal;
+    font-weight: 600;
+    font-size: 30px;
+    line-height: 60px;
+    text-transform: capitalize;
+    color: #FFFFFF;
+}
+#paragraphe{
+    font-style: normal;
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 45px;
+    text-transform: capitalize;
+    color: #EAEAEA;
+}
+#get_started-btn{
+    font-style: normal;
+    font-weight: 600;
+    font-size: 17px;
+    line-height: 30px;
+    text-transform: capitalize;
+    color: #FFFFFF;
+}

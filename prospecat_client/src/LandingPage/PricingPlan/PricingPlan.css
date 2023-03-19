@@ -1,0 +1,48 @@
+#pricingplan{
+    background-color: #F6F6F6;
+}
+#freePlanTitle{
+    font-weight: bold;
+}
+#listPlan{
+    font-weight: bold;
+}
+#numberPlan{
+    color:#06D19C;
+    font-weight: bold;
+    font-size: 20px;
+}
+#perMonth{
+    font-size: 12px;
+}
+#btnPlan{
+    font-weight: 600;
+    font-size: 17px;
+    line-height: 30px;
+    color: #FFFFFF;
+    background-color: #06D19C;
+    width: 220px;
+    height: 44px;
+}
+#per_month{
+    color: #9B9B9B;
+    font-size: 10px;
+}
+.button{
+    background-color: #FFFFFF;
+    color: black;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.25);
+    border-radius: 15px;
+    width: 80%;
+}
+#sffn{
+    width: 40%;
+    background-color: #06D19C;
+    color: white;
+    font-weight: bold;
+}
+#titleplan{
+    font-weight: bold;
+    color: #0088FF;
+    font-size: 27px;
+}

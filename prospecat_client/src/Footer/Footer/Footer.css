@@ -1,0 +1,16 @@
+#footer{
+    background-color: #333C44;
+    color: white;
+}
+#icon{
+    Width :42px;
+    Height :35px;
+}
+li{
+    font-weight: 500;
+    font-size: 17px;
+}
+#liTitle{
+    color: #0088FF;
+    font-weight: bold;
+}

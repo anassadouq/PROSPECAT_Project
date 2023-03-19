@@ -1,0 +1,19 @@
+#all{
+    background-color: #F1F1F1;
+}
+#title{
+    font-weight: bold;
+}
+#btn_features{
+    font-weight: 600;
+    font-size: 17px;
+    line-height: 30px;
+    text-transform: capitalize;
+    color: #FFFFFF;
+    background-color: #06D19C;
+    width: 250px;
+    height: 50px;
+}
+#titleBold{
+    font-size: 23px;
+}

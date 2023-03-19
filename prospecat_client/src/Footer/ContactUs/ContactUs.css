@@ -1,0 +1,30 @@
+#contact_us{
+    background: linear-gradient(180deg, #51AEFF 0%, #0088FF 100%);
+}
+#contact{
+    font-style: normal;
+    font-weight: 600;
+    font-size: 40px;
+    line-height: 60px;
+    text-transform: capitalize;
+    color: #FFFFFF;
+}
+#paragraphe{
+    font-style: normal;
+    font-weight: 500;
+    font-size: 23px;
+    line-height: 45px;
+    text-transform: capitalize;
+    color: #EAEAEA;
+}
+#contact-btn{
+    font-style: normal;
+    font-weight: 600;
+    font-size: 17px;
+    line-height: 30px;
+    text-transform: capitalize;
+    color: #FFFFFF;
+    background-color: #06D19C;
+    width: 250px;
+    height: 50px;
+}

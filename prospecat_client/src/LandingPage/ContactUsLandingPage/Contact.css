@@ -1,0 +1,18 @@
+#title{
+    color: #0088FF;
+}
+#email{
+    color: #06D19C;
+    font-weight: bold;
+}
+#btn_contact{
+    font-style: normal;
+    font-weight: 600;
+    font-size: 17px;
+    line-height: 30px;
+    text-transform: capitalize;
+    color: #FFFFFF;
+    background-color: #0088FF;
+    width: 250px;
+    height: 50px;
+}
