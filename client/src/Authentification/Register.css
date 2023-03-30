@@ -1,0 +1,7 @@
+#input{
+    width: 100%;
+}
+h3:hover{
+    text-decoration: underline #06D19C;
+    font-weight: bold;
+}

@@ -1,0 +1,12 @@
+#blue{
+    background-color: #0088FF;
+    color: #FFFFFF;
+}
+#logsign{
+    color: #FFFFFF;
+}
+@media only screen and (max-width: 767px) {
+    #blue {
+        display: none;
+    }
+}
