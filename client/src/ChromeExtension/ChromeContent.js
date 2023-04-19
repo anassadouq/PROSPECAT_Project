@@ -1,24 +1,35 @@
 import React, { Component } from "react";
-import './Chrome.css';
 export default class ChromeContent extends Component{
     render(){
         return(
-            <div className="row my-5" id="all">
-                <div className="col-8">
-                    <h1 className="my-5 text-center" id="prg">Extract Search Results and Find Emails On LinkedIn</h1>
-                    <p className="text-secondary" id="prg2">Prospecat Chrome Extension. A must have productivity tool.</p>
-                    <div className="row">
-                        <center>
-                            <button className="btn rounded-pill my-4" id="btn_Leads2">Install Chrome Extension for FREE </button>
-                            <button className="btn rounded-pill my-2 mx-3" id="btn_Leads1">Signup for Free</button>
-                        </center>
-                        
+            <section class="main-banner service-banner offset-top">
+            <div class="container">
+                <div class="row align-items-center full-height">
+                    <div class="col-md-7 center-sm">
+                        <h1 class="main-heading">Extract Search Result and <br/>Find Emails On LinkedIn</h1>
+                        <p class="main-heading-para">Use a company name to find it's valuable emails and employees.</p>
+                        <div class="main-actions">
+                            <ul class="list-inline">
+                                <li class="list-inline-item">
+                                    <a href="" class="btn-main btn-large">Take Closer Look</a>
+                                </li>
+                                <li class="list-inline-item">
+                                    <a href="https://www.youtube.com/embed/Cnfj6QCGLyA" class="btn-main btn-green btn-large popup-youtube"><i class="fa fa-youtube"></i> Watch The Video</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-md-5 d-none d-md-block">
+                        <img src="images/chrome.png" class="img-fluid m-auto service-img" alt="It has never been easier to find Leads , Email adresses..."/>
                     </div>
                 </div>
-                <div className="col-4 my-5">
-                    <img src="./images/chrome.png" style={{"height":"350px"}} id="img"/>
+            </div>
+            <div class="mouse-scroll">
+                <div>
+                    <span></span>
                 </div>
             </div>
+        </section>
         )
     }
 }

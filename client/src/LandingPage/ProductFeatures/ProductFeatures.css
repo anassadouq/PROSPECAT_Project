@@ -17,3 +17,14 @@
 #titleBold{
     font-size: 23px;
 }
+#btn_contact1{
+    background: #06D19C;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 17px;
+    line-height: 30px;
+    text-transform: capitalize;
+    color: #FFFFFF;
+    width: 250px;
+    height: 50px;
+}

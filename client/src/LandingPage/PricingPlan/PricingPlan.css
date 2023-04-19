@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700;800&display=swap');
+
 #pricingplan{
     background-color: #F6F6F6;
 }
@@ -45,4 +47,138 @@
     font-weight: bold;
     color: #0088FF;
     font-size: 27px;
+}
+
+
+/*****
+    Pricing plan
+*****/
+
+.pricing-plan {
+    padding: 90px 0px;
+    background: #F7F7F7;
+}
+
+.pricing-plan .pricing-plan-container {
+    padding-top: 15px;
+}
+
+.plan-left {
+    background: #FFFFFF;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    box-sizing: border-box;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.25);
+    border-radius: 15px;
+    padding: 31px 0px;
+}
+
+.plan-left h4 {
+    color: #0088FF;
+    font-size: 30px;
+}
+
+.plan-left ul {
+    margin: 30px 0px;
+}
+
+.plan-left ul li {
+    padding: 16px 20px;
+    background: rgba(196, 196, 196, 0.1);
+    margin-bottom: 8px;
+    height: auto;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+}
+
+.plan-left ul li h5 {
+    font-weight: 600;
+    font-size: 20px;
+    color: #303030;
+    float: left;
+    margin-bottom: 0px;
+}
+
+.plan-left ul li img {
+    width: 20px;
+}
+
+.plan-left ul li .option {
+    width: 400px;
+    max-width: 100%;
+}
+
+.plan-left ul li .value {
+    color: #06D19C;
+}
+
+.main-check-listing li {
+    position: relative;
+}
+
+.main-check-listing li>input[type="radio"] {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    height: 100%;
+    z-index: 12;
+    opacity: 0;
+}
+
+.main-check {
+    background: #FFFFFF;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    box-sizing: border-box;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.25);
+    border-radius: 15px;
+    padding: 24px 15px;
+    margin-bottom: 14px;
+}
+
+.main-check .main-radio {
+    border: 5px solid #0088FF;
+    width: 30px;
+    height: 30px;
+    display: inline-block;
+    border-radius: 50%;
+    vertical-align: middle;
+    position: relative
+}
+
+.main-check .main-radio span {
+    display: inline-block;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: transparent;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+}
+
+.main-check h4 {
+    display: inline-block;
+    vertical-align: middle;
+    margin-bottom: 0;
+    font-size: 20px;
+}
+
+.main-check h4.price {
+    color: #06D19C;
+}
+
+.main-check h4.price span {
+    font-size: 13px;
+    color: #808080;
+    font-weight: 400;
+    font-weight: 600;
+}
+
+.main-check-listing li input[type="radio"]:checked+.main-check .main-radio span {
+    background-color: #0088FF;
+}
+.btn-main.btn-green {
+    background-color: #06D19C;
 }

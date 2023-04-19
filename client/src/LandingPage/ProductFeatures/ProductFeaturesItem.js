@@ -1,5 +1,4 @@
 import React, { Component } from "react";
-import './ProductFeatures.css';
 export default class ProductFeaturesItem extends Component{
     render(){
         return(

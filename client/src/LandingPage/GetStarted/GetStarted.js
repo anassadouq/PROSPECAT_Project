@@ -8,7 +8,7 @@ export default class GetStarted extends Component{
                     <h1 id="get_started_title">Get started Now</h1>
                     <p id="paragraphe">Grab your free account and start prospecting now.</p>
                     <center>
-                        <button className="btn btn-success rounded-pill" id="btnPlan">SIGNUP FOR FREE</button>
+                        <button className="btn btn-success rounded-pill" id="btn_contact1">SIGNUP FOR FREE</button>
                     </center>
                 </div>
             </div>

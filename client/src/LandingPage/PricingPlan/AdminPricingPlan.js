@@ -22,31 +22,35 @@ export default function AdminPricingPlan(){
       },[])
 
     {/*Create Plan*/}
-      const createPlan = () => {
-        if (title && price && leadssearch && emailsearch && mlps && importcsv) {
-          Axios.post("http://localhost:3001/createPlan", {
-            title, price, leadssearch, emailsearch, mlps, importcsv,
-          }).then((res) => {
-            setPlans((prevPlans) => [...prevPlans, res.data]);
-          });
-        }
-      };
+    const createPlan = () => {
+      if (title && price && leadssearch && emailsearch && mlps && importcsv) {
+        Axios.post("http://localhost:3001/createPlan", {
+          title, price, leadssearch, emailsearch, mlps, importcsv,
+        }).then((res) => {
+          setPlans((prevPlans) => [...prevPlans, res.data]);
+          window.location.reload();
+        });
+      }
+    };
+    
     
     {/*Delete Plan*/}
-      const deletePlan = (_id) => {
-        Axios.delete(`http://localhost:3001/deletePlan/${_id}`)
-          .then(res => {
-            console.log(res.data);
-            // success response
-            setPlans((prevPlans) =>
-              prevPlans.filter((plan) => plan._id !== _id)
-            );
-          })
-          .catch(err => {
-            console.error(err);
-            // error response
-          });
-      };
+    const deletePlan = (_id) => {
+      Axios.delete(`http://localhost:3001/deletePlan/${_id}`)
+        .then(res => {
+          console.log(res.data);
+          // success response
+          setPlans((prevPlans) =>
+            prevPlans.filter((plan) => plan._id !== _id)
+          );
+          window.location.reload(); // Actualiser la page après la suppression réussie
+        })
+        .catch(err => {
+          console.error(err);
+          // error response
+        });
+    };
+    
 
     {/*Logout*/}
       const logout = () => {
@@ -71,41 +75,94 @@ export default function AdminPricingPlan(){
               <input type="text" placeholder="Unlimited CSV IMPORT/EXPORT" value={importcsv} onChange={(e) => setImportcsv(e.target.value)}/>
               <button className="btn btn-primary" onClick={createPlan}>Create New Plan</button>
             </center>
-            {plans.map((plan, index) => (
-              <div className="row" key={index}>
-                <div className="col-5 mx-5 ">
-                  {selectedPlanIndex === index && (
-                    <div>
-                      <h5 id="titleplan" className="mx-5">{plan.title}</h5>
-                      <p>Leads Search
-                        <span className="mx-5" id="numberPlan">{plan.leadssearch}</span>
-                      </p>
-                      <p>Email Search
-                        <span className="mx-5" id="numberPlan">{plan.emailsearch}</span>
-                      </p>
-                      <p>Maximum Leads Per Search
-                        <span className="mx-5" id="numberPlan">{plan.mlps}</span>
-                      </p>
-                      <p>Unlimited CSV IMPORT/EXPORT
-                        <span className="mx-5" id="numberPlan">{plan.importcsv}</span>
-                      </p>
+            <section className="pricing-plan" id="pricing">
+        <div className="container">
+          <div className="text-center">
+            <h2 className="main-heading">Pricing Plan</h2>
+            <p className="main-heading-para">We offer multiple pricing models that fits every business size.</p>
+          </div>
+    
+          <div className="pricing-plan-container">
+            <div className="row">
+              <div className="col-md-6">
+                {selectedPlanIndex !== -1 ? (
+                  <div className="plan-left">
+                    <h4 className="text-center">
+                      {plans[selectedPlanIndex].title}
+                    </h4>
+                    <ul className="list-unstyled">
+                      <li>
+                        <h5 className="option">Leads Search</h5>
+                        <h5 className="value">
+                          {plans[selectedPlanIndex].leadssearch}
+                        </h5>
+                      </li>
+                      <li>
+                        <h5 className="option">Email Search</h5>
+                        <h5 className="value">
+                          {plans[selectedPlanIndex].emailsearch}
+                        </h5>
+                      </li>
+                      <li>
+                        <h5 className="option">Maximum Leads Per Search</h5>
+                        <h5 className="value">{plans[selectedPlanIndex].mlps}</h5>
+                      </li>
+                      <li>
+                        <h5 className="option">Unlimited CSV IMPORT/EXPORT</h5>
+                        <img src="images/check.svg" alt="Icone check" />
+                      </li>
+                    </ul>
+                    <div className="text-center">
                       <button className="mx-2 btn rounded-pill" id="sffn">Start For Free NOW</button>
-                      <button className="btn btn-danger rounded-pill" onClick={() => deletePlan(plan._id)}>Delete Plan</button>
+                      <button className="btn btn-danger rounded-pill" onClick={() => deletePlan(plans[selectedPlanIndex]._id)}>Delete Plan</button>                    </div>
+                  </div>
+                ) : (
+                  <div className="plan-left">
+                    <h4 className="text-center"></h4>
+                  </div>
+                )}
+              </div>
+    
+              <div className="col-md-6">
+                <div className="row">
+                  {plans.map((plan, index) => (
+                    <div className="col-md-12" key={index}>
+                      <div className="plan-right">
+                        <div className="main-check-listing">
+                          <ul className="list-unstyled">
+                            <li>
+                              <input
+                                type="radio"
+                                name="pack"
+                                onClick={() => setSelectedPlanIndex(index)}
+                              />
+                              <div className="main-check">
+                                <div className="row align-items-center">
+                                  <div className="col-8">
+                                    <span className="main-radio">
+                                      <span></span>
+                                    </span>
+                                    <h4>{plan.title}</h4>
+                                  </div>
+                                  <div className="col-4">
+                                    <h4 className="price">
+                                      {plan.price}$ <span>Per month</span>
+                                    </h4>
+                                  </div>
+                                </div>
+                              </div>
+                            </li>
+                          </ul>
+                        </div>
+                      </div>
                     </div>
-                  )}
-                </div>
-                <div className="col-4">
-                  <ul type="none">
-                    <li>
-                      <button className="btn btn-light button" id="listPlan" onClick={() => setSelectedPlanIndex(index)}>{plan.title}
-                        <span className="mx-5" id="numberPlan">{plan.price}$</span>
-                      </button>       
-                    </li>
-                  </ul>
+                  ))}
                 </div>
               </div>
-            ))}
-            
+            </div>
+          </div>
+        </div>
+      </section>
           </div>
         </div>
     )

@@ -1,5 +1,4 @@
 import React, { useState } from 'react';
-import './WhatProspecat.css';
 
 export default function WhatProspecat() {
     const [text, setText] = useState('');

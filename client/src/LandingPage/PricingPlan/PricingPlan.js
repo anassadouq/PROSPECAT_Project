@@ -1,16 +1,8 @@
 import { useState, useEffect } from "react";
 import Axios from "axios";
-import "./PricingPlan.css";
 
 export default function PricingPlan() {
   const [plans, setPlans] = useState([]);
-  const [title, setTitle] = useState("");
-  const [price, setPrice] = useState("");
-  const [leadssearch, setLeadssearch] = useState("");
-  const [emailsearch, setEmailsearch] = useState("");
-  const [mlps, setMlps] = useState("");
-  const [importcsv, setImportcsv] = useState("");
-
   const [selectedPlanIndex, setSelectedPlanIndex] = useState(-1);
 
   {/*Show Plans*/}
@@ -19,46 +11,119 @@ export default function PricingPlan() {
       .then(res => setPlans(res.data))
     },[])
 
-  return (
-    <div>
-      <div className="my-5 mx-3" id="pricingplan">
-        <h2 className="text-center" style={{ fontWeight: "bold" }}>Pricing Plan</h2>
-        <p className="text-secondary text-center" id="text">We offer multiple pricing models that fit every business size.</p>
-
-          {plans.map((plan, index) => (
-            <div className="row" key={index}>
-              <div className="col-5 mx-5 ">
-                {selectedPlanIndex === index && (
-                  <div>
-                    <h5 id="titleplan" className="mx-5">{plan.title}</h5>
-                    <p>Leads Search
-                      <span className="mx-5" id="numberPlan">{plan.leadssearch}</span>
-                    </p>
-                    <p>Email Search
-                      <span className="mx-5" id="numberPlan">{plan.emailsearch}</span>
-                    </p>
-                    <p>Maximum Leads Per Search
-                      <span className="mx-5" id="numberPlan">{plan.mlps}</span>
-                    </p>
-                    <p>Unlimited CSV IMPORT/EXPORT
-                      <span className="mx-5" id="numberPlan">{plan.importcsv}</span>
-                    </p>
-                    <button className="mx-2 btn rounded-pill" id="sffn">Start For Free NOW</button>
+    return (
+      <section className="pricing-plan" id="pricing">
+        <div className="container">
+          <div className="text-center">
+            <h2 className="main-heading">Pricing Plan</h2>
+            <p className="main-heading-para">We offer multiple pricing models that fits every business size.</p>
+          </div>
+    
+          <div className="pricing-plan-container">
+            <div className="row">
+              <div className="col-md-6">
+                {selectedPlanIndex !== -1 ? (
+                  <div className="plan-left">
+                    <h4 className="text-center">
+                      {plans[selectedPlanIndex].title}
+                    </h4>
+                    <ul className="list-unstyled">
+                      <li>
+                        <h5 className="option">Leads Search</h5>
+                        <h5 className="value">
+                          {plans[selectedPlanIndex].leadssearch}
+                        </h5>
+                      </li>
+                      <li>
+                        <h5 className="option">Email Search</h5>
+                        <h5 className="value">
+                          {plans[selectedPlanIndex].emailsearch}
+                        </h5>
+                      </li>
+                      <li>
+                        <h5 className="option">Maximum Leads Per Search</h5>
+                        <h5 className="value">{plans[selectedPlanIndex].mlps}</h5>
+                      </li>
+                      <li>
+                        <h5 className="option">Unlimited CSV IMPORT/EXPORT</h5>
+                        <img src="images/check.svg" alt="Icone check" />
+                      </li>
+                    </ul>
+                    <div className="text-center">
+                      <button className="mx-2 btn rounded-pill" id="btn_contact1">Start For Free NOW</button>
+                    </div>
+                  </div>
+                ) : (
+                  <div className="plan-left">
+                    <h4 className="text-center">Free Plan</h4>
+                    <ul className="list-unstyled">
+                      <li>
+                        <h5 className="option">Leads Search</h5>
+                        <h5 className="value">
+                          10
+                        </h5>
+                      </li>
+                      <li>
+                        <h5 className="option">Email Search</h5>
+                        <h5 className="value">
+                          100
+                        </h5>
+                      </li>
+                      <li>
+                        <h5 className="option">Maximum Leads Per Search</h5>
+                        <h5 className="value">50</h5>
+                      </li>
+                      <li>
+                        <h5 className="option">Unlimited CSV IMPORT/EXPORT</h5>
+                        <img src="images/check.svg" alt="Icone check" />
+                      </li>
+                    </ul>
+                    <div className="text-center">
+                      <button className="mx-2 btn rounded-pill" id="btn_contact1">Start For Free NOW</button>
+                    </div>
                   </div>
                 )}
               </div>
-              <div className="col-4">
-                <ul type="none">
-                  <li>
-                    <button className="btn btn-light button" id="listPlan" onClick={() => setSelectedPlanIndex(index)}>{plan.title}
-                      <span className="mx-5" id="numberPlan">{plan.price}$</span>
-                    </button>
-                  </li>
-                </ul>
+    
+              <div className="col-md-6">
+                <div className="row">
+                  {plans.map((plan, index) => (
+                    <div className="col-md-12" key={index}>
+                      <div className="plan-right">
+                        <div className="main-check-listing">
+                          <ul className="list-unstyled">
+                            <li>
+                              <input
+                                type="radio"
+                                name="pack"
+                                onClick={() => setSelectedPlanIndex(index)}
+                              />
+                              <div className="main-check">
+                                <div className="row align-items-center">
+                                  <div className="col-8">
+                                    <span className="main-radio">
+                                      <span></span>
+                                    </span>
+                                    <h4>{plan.title}</h4>
+                                  </div>
+                                  <div className="col-4">
+                                    <h4 className="price">
+                                      {plan.price}$ <span>Per month</span>
+                                    </h4>
+                                  </div>
+                                </div>
+                              </div>
+                            </li>
+                          </ul>
+                        </div>
+                      </div>
+                    </div>
+                  ))}
+                </div>
               </div>
             </div>
-          ))}
-      </div>
-    </div>
-  )
+          </div>
+        </div>
+      </section>
+    );
 }

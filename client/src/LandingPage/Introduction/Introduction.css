@@ -4,3 +4,15 @@
 #prg2{
     font-size: 22px;
 }
+#btn_Leads1{
+    background: #0088FF;
+    box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.3);
+    border-radius: 150px;
+    color: white;
+}
+#btn_Leads2{
+    background: #06D19C;
+    box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.3);
+    border-radius: 150px;
+    color: white;
+}
