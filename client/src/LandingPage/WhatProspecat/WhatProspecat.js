@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-
+import './WhatProspecat.css'
 export default function WhatProspecat() {
     const [text, setText] = useState('');
     const handleButtonClick = (buttonText) => {
@@ -30,7 +30,7 @@ export default function WhatProspecat() {
                         </li>
                     </ul>
                 </div>
-                <div className='col'>
+                <div className='col text-center'>
                     <img src="./images/WhatProspecat.png" id="imgWhatProspecat"/>
                 </div>
                 <span className="my-4"></span>

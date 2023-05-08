@@ -1,5 +1,4 @@
 import React, { Component } from "react";
-//import { SlMagnifier } from "react-icons/sl";
 export default class CategorieSearch extends Component{
     render(){
         return(
@@ -7,8 +6,11 @@ export default class CategorieSearch extends Component{
                 <div className="form-group col-5">
                     <select className="form-control form-select">
                         <option>Categories</option>
-                        <option>Categories</option>
-                        <option>Categories</option>
+                        <option>Categorie 1</option>
+                        <option>Categorie 2</option>
+                        <option>Categorie 3</option>
+                        <option>Categorie 4</option>
+                        <option>Categorie 5</option>
                     </select>
                 </div>
                 <div className="form-group col-5">
