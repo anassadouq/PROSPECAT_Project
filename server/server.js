@@ -1,15 +1,19 @@
-// anassadouq123@outlook.fr
-
 const express = require('express');
-const mongoose = require('mongoose');
-const cors = require('cors');
-const jwt = require('jsonwebtoken');
-const bcrypt = require('bcrypt');
+
 const app = express();
+const cors = require('cors');
 app.use(cors())
 app.use(express.json())
+const jwt = require('jsonwebtoken');
+const bcrypt = require('bcrypt');
 
-mongoose.connect("mongodb+srv://prospecat:prospecat@cluster0.h1vp0lq.mongodb.net/prospecat?retryWrites=true&w=majority")
+const   userName ="prospecat",
+        password =process.env.PASSWORD,
+        database ="prospecat";
+
+const mongoose = require("mongoose")
+mongoose.connect(`mongodb+srv://${userName}:${password}@cluster0.h1vp0lq.mongodb.net/${database}?retryWrites=true&w=majority`)
+
 
 // Plan model
 const PlansModel = require('./models/Plans')
