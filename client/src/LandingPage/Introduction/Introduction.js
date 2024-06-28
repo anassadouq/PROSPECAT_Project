@@ -11,7 +11,7 @@ export default class Introduction extends Component{
                     <button className="mx-3 btn rounded-pill" id="btn_contact1">Get Chrome Extension</button>
                 </div>
                 <div className="col-4">
-                    <img src="./images/introduction.png" style={{"height":"450px","width":"400px"}} id="img"/>
+                    <img src="./images/introduction.png" id="img"/>
                 </div>
                 <span className="my-5"></span>
             </div>

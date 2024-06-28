@@ -7,12 +7,12 @@ app.use(express.json())
 const jwt = require('jsonwebtoken');
 const bcrypt = require('bcrypt');
 
-const   userName ="prospecat",
+const   userName ="prospecatprospecat",
         password =process.env.PASSWORD,
         database ="prospecat";
 
 const mongoose = require("mongoose")
-mongoose.connect(`mongodb+srv://${userName}:${password}@cluster0.h1vp0lq.mongodb.net/${database}?retryWrites=true&w=majority`)
+mongoose.connect(`mongodb+srv://${userName}:${password}@cluster0.qterwmw.mongodb.net/${database}?retryWrites=true&w=majority`)
 
 
 // Plan model
